@@ -7,6 +7,19 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  rabbitmq:
+    host: ${RABBIT_HOST:localhost}
+    password: ${RABBIT_PASS:guest}
+    username: ${RABBIT_USER:guest}
+    port: ${RABBIT_PORT:5672}
 
 clients:
   client-ms: ${CLIENT_MS:localhost:8080}
+service:
+  channel-name: ${CHANNEL_NAME:message}
+
+rabbit:
+  queue:
+    entries: ${SEND_PROVISION_QUEUE:entries}
+server:
+  port: 8082

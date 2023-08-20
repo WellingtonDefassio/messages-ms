@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>bcb.com.br</groupId>
-    <artifactId>messages-ms</artifactId>
+    <artifactId>message-ms</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>messages-ms</name>
-    <description>messages-ms</description>
+    <name>message-ms</name>
+    <description>message-ms</description>
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2022.0.4</spring-cloud.version>
@@ -49,7 +49,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
     </dependencies>
+
 
     <dependencyManagement>
         <dependencies>

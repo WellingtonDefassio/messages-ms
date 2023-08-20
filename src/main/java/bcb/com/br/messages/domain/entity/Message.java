@@ -2,7 +2,9 @@ package bcb.com.br.messages.domain.entity;
 
 import bcb.com.br.messages.domain.enums.Status;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,17 +15,17 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Messages {
+public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    @NotEmpty
+    @NotBlank
     private String cnpj;
-    @NotEmpty
+    @NotBlank
     private String message;
-    @NotEmpty
+    @NotBlank
     private String telephoneDestiny;
-    @NotEmpty
+    @NotNull
     private Boolean isWhatsApp;
     @Enumerated(EnumType.STRING)
     private Status status;
