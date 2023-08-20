@@ -12,6 +12,9 @@ spring:
     password: ${RABBIT_PASS:guest}
     username: ${RABBIT_USER:guest}
     port: ${RABBIT_PORT:5672}
+  rabbit:
+    queue:
+      status: ${STATUS_QUEUE:status}
 
 clients:
   client-ms: ${CLIENT_MS:localhost:8080}

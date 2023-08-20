@@ -3,12 +3,12 @@ package bcb.com.br.messages.domain.entity;
 import bcb.com.br.messages.domain.enums.Status;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Timestamp;
 import java.util.UUID;
 
 @Entity(name = "messages")
@@ -29,6 +29,8 @@ public class Message {
     private Boolean isWhatsApp;
     @Enumerated(EnumType.STRING)
     private Status status;
+    @NotNull
+    private Timestamp createdAt;
 
 
 }
