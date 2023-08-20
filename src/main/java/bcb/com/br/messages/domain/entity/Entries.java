@@ -10,7 +10,7 @@ import lombok.Data;
 import java.sql.Timestamp;
 import java.util.UUID;
 
-@Entity(name = "entries")
+//@Entity(name = "entries")
 @Data
 public class Entries {
 

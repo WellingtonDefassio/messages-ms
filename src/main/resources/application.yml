@@ -7,3 +7,6 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+
+clients:
+  client-ms: ${CLIENT_MS:localhost:8080}
