@@ -17,7 +17,7 @@ spring:
       status: ${STATUS_QUEUE:status}
 
 clients:
-  client-ms: ${CLIENT_MS:localhost:8080}
+  client-ms: ${CLIENT_MS:localhost}:8080
 service:
   channel-name: ${CHANNEL_NAME:message}
 
