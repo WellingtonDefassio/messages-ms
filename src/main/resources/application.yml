@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5433/messages
+    url: jdbc:postgresql://${CLIENT_DB:localhost}:5433/messages
     username: root
     password: secret
   jpa:
